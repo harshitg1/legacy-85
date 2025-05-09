@@ -3,20 +3,20 @@ import { PanelsTopLeft } from "lucide-react";
 import { ArrowRightIcon, EnvelopeClosedIcon, GitHubLogoIcon, HamburgerMenuIcon, MixerVerticalIcon, MobileIcon } from "@radix-ui/react-icons";
 import { Button } from "@/components/ui/button";
 import { ModeToggle } from "@/components/mode-toggle";
-
+import { Saira } from "next/font/google";
 import AuthenticationForm from "@/components/Authentication/AuthenticationForm";
 
 export default function HomePage() {
   return (
     <div className="flex flex-col min-h-screen">
-      <header className="z-[50] sticky top-0 w-full bg-background/95 border-b backdrop-blur-sm dark:bg-black/[0.6] border-border/40">
+      <header className="z-[50] bg-white sticky top-0 w-full border-b  border-border/40">
         <div className="container h-20 flex items-center">
           <Link
             href="/"
             className="flex justify-start items-center hover:opacity-85 transition-opacity duration-300"
           >
             <MixerVerticalIcon className="h-6 w-6 text-primary" />
-            <span className="font-bold from-neutral-700">Legacy 85</span>
+            <span className="font-bold ">Legacy 85</span>
             {/* <span className="sr-only">shadcn/ui sidebar</span> */}
           </Link>
           <nav className="ml-auto  w-3/4 flex justify-around items-center">
@@ -70,10 +70,10 @@ export default function HomePage() {
               <div className="flex justify-start items-center gap-2  py-1 text-xl tracking-wide font-medium text-primary">
                 Welcome to Legacy Academy !
               </div>
-              <h1 className="text-3xl font-bold leading-relaxed tracking-wide md:text-5xl lg:leading-[1.1]">
+              <h1 className="text-3xl font-black  leading-relaxed tracking-wide md:text-6xl ">
                 Start Your Trading <br/> Journey  with Us
               </h1>
-              <div className="flex flex-col gap-2 text-lg text-muted-foreground font-semibold">
+              <div className="flex flex-col gap-2 text-lg text-gray-800 font-bold">
                 <p className="font-light">
                   Leading the way in trading education and resources.
                 </p>
