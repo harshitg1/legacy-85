@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { GeistSans } from "geist/font/sans";
-import {  Inconsolata } from "next/font/google";
+import { Inconsolata } from "next/font/google";
 import "./globals.css";
 
 import { ThemeProvider } from "@/components/providers/theme-provider";
@@ -10,25 +10,25 @@ export const metadata: Metadata = {
   description:
     " starting point for projects focused on data analysis and representation.",
   alternates: {
-    canonical: "/"
+    canonical: "/",
   },
   openGraph: {
     url: "/",
     title: "Data Visualization Dashboard",
     description:
       "The Data Visualization Dashboard serves as an excellent starting point for projects focused on data analysis and representation.",
-    type: "website"
+    type: "website",
   },
   twitter: {
     card: "summary_large_image",
     title: "Data Visualization Dashboard",
     description:
-      "The Data Visualization Dashboard serves as an excellent starting point for projects focused on data analysis and representation."
-  }
+      "The Data Visualization Dashboard serves as an excellent starting point for projects focused on data analysis and representation.",
+  },
 };
 
 export default function RootLayout({
-  children
+  children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
