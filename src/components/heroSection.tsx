@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import { Button } from "@/components/ui/button";
-import { ChevronRight } from "lucide-react";
+import { ChevronRight, TrendingUp, BarChart3 } from "lucide-react";
 
 export default function HeroSection() {
   return (
@@ -11,7 +11,7 @@ export default function HeroSection() {
       <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-theme-primary-10 rounded-full blur-[120px] -z-10"></div>
       <div className="absolute bottom-0 left-0 w-[600px] h-[600px] bg-theme-primary-5 rounded-full blur-[100px] -z-10"></div>
 
-      <div className="container px-4 py-12 md:py-16 mx-auto">
+      <div className="container px-2 py-12 md:py-12 mx-auto">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           {/* Left Content */}
           <div className="space-y-8">
@@ -23,7 +23,7 @@ export default function HeroSection() {
               Trading Academy Now Live
             </div>
 
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-slate-900 dark:text-white leading-tight animate-fade-in-up">
+            <h1 className="text-5xl  font-bold text-slate-900 dark:text-white leading-tight animate-fade-in-up">
               Master the <span className="text-theme-primary">Markets</span>{" "}
               with Confidence
             </h1>
@@ -41,13 +41,13 @@ export default function HeroSection() {
               className="flex flex-col sm:flex-row gap-4 animate-fade-in-up"
               style={{ animationDelay: "0.2s" }}
             >
-              <Button className="h-12 px-8 text-base rounded-full bg-theme-primary hover:bg-theme-primary-dark text-black font-medium group transition-all duration-300 transform hover:translate-y-[-2px]">
-                Start Learning Now
+              <Button className="h-10 px-4 text-xs bg-theme-primary hover:bg-theme-primary-dark text-black/60  font-medium group transition-all duration-300 transform hover:translate-y-[-2px]">
+                Start Learning
                 <ChevronRight className="h-4 w-4 ml-2 transition-transform duration-300 group-hover:translate-x-1" />
               </Button>
               <Button
                 variant="outline"
-                className="h-12 px-8 text-base rounded-full border-slate-300 dark:border-slate-700 text-slate-900 dark:text-white hover:bg-slate-100 dark:hover:bg-slate-800 transition-all duration-300 transform hover:translate-y-[-2px]"
+                className="h-10 px-4 text-xs rounded-full border-slate-300 dark:border-slate-700 text-muted-foreground dark:text-white hover:bg-slate-100 dark:hover:bg-slate-800 transition-all duration-300 transform hover:translate-y-[-2px]"
               >
                 View Courses
               </Button>
@@ -85,13 +85,12 @@ export default function HeroSection() {
             style={{ animationDelay: "0.4s" }}
           >
             <div className="relative">
-              {/* Main Mobile Image */}
               <div className="relative z-10 transition-transform duration-500 hover:transform hover:scale-[1.02] hover:rotate-1">
                 <Image
-                  src="/trading-app.jpg"
+                  src="/trading.png"
                   alt="Trading App Interface"
-                  width={400}
-                  height={800}
+                  width={480} // Increased from 400
+                  height={800} // Increased from 800
                   className="rounded-3xl border-4 border-white dark:border-slate-800 shadow-2xl"
                   priority
                 />
@@ -101,19 +100,10 @@ export default function HeroSection() {
               <div className="absolute top-10 -left-16 p-4 bg-white dark:bg-slate-800 rounded-lg shadow-lg border border-slate-200 dark:border-slate-700 max-w-[200px] animate-float z-20">
                 <div className="flex items-center space-x-2">
                   <div className="p-2 rounded-full bg-theme-primary-20">
-                    <svg
+                    <TrendingUp
                       className="h-5 w-5 text-theme-primary"
-                      fill="none"
-                      viewBox="0 0 24 24"
-                      stroke="currentColor"
-                    >
-                      <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        strokeWidth={2}
-                        d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"
-                      />
-                    </svg>
+                      strokeWidth={2}
+                    />
                   </div>
                   <div>
                     <h4 className="font-semibold text-slate-900 dark:text-white">
@@ -132,19 +122,10 @@ export default function HeroSection() {
               {/* Floating Card 2 */}
               <div className="absolute -bottom-5 -right-10 p-4 bg-white dark:bg-slate-800 rounded-lg shadow-lg border border-slate-200 dark:border-slate-700 max-w-[220px] animate-float-delayed z-20">
                 <div className="flex items-center mb-2">
-                  <svg
+                  <BarChart3
                     className="h-5 w-5 text-theme-primary mr-2"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    stroke="currentColor"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth={2}
-                      d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"
-                    />
-                  </svg>
+                    strokeWidth={2}
+                  />
                   <h4 className="font-semibold text-slate-900 dark:text-white">
                     Trading Success
                   </h4>

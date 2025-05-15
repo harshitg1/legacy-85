@@ -4,7 +4,7 @@ import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import { ModeToggle } from "@/components/mode-toggle";
-import { Menu, X } from "lucide-react";
+import { Menu, X, LineChart } from "lucide-react";
 
 export default function Navbar() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -14,21 +14,9 @@ export default function Navbar() {
       <div className="container mx-auto px-4 h-16 md:h-20 flex items-center justify-between">
         {/* Logo */}
         <Link href="/" className="flex items-center space-x-2">
-          <svg
-            className="h-8 w-8 text-theme-primary"
-            fill="none"
-            viewBox="0 0 24 24"
-            stroke="currentColor"
-          >
-            <path
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              strokeWidth={2}
-              d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"
-            />
-          </svg>
+          <LineChart className="h-8 w-8 text-theme-primary" strokeWidth={2} />
           <span className="text-xl font-bold text-slate-900 dark:text-white">
-            TradeMaster
+            Legacy-85
           </span>
         </Link>
 
@@ -100,22 +88,10 @@ export default function Navbar() {
               <div className="p-4 border-b border-slate-200 dark:border-slate-800 flex items-center justify-between">
                 <Link href="/" className="flex items-center space-x-2">
                   <div className="bg-theme-primary p-1.5 rounded-md">
-                    <svg
-                      className="h-5 w-5 text-white"
-                      fill="none"
-                      viewBox="0 0 24 24"
-                      stroke="currentColor"
-                    >
-                      <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        strokeWidth={2}
-                        d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"
-                      />
-                    </svg>
+                    <LineChart className="h-5 w-5 text-white" strokeWidth={2} />
                   </div>
                   <span className="text-xl font-bold text-slate-900 dark:text-white">
-                    TradeMaster
+                    Legacy-85
                   </span>
                 </Link>
                 <Button
@@ -135,22 +111,13 @@ export default function Navbar() {
                     onClick={() => setMobileMenuOpen(false)}
                   >
                     <div className="bg-theme-primary p-1.5 rounded-md">
-                      <svg
+                      <LineChart
                         className="h-5 w-5 text-white"
-                        fill="none"
-                        viewBox="0 0 24 24"
-                        stroke="currentColor"
-                      >
-                        <path
-                          strokeLinecap="round"
-                          strokeLinejoin="round"
-                          strokeWidth={2}
-                          d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"
-                        />
-                      </svg>
+                        strokeWidth={2}
+                      />
                     </div>
                     <span className="text-lg font-bold text-slate-900 dark:text-white">
-                      TradeMaster
+                      Legacy-85
                     </span>
                   </Link>
                   <Link

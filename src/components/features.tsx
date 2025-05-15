@@ -1,6 +1,6 @@
 "use client";
 
-import { CheckCircle } from "lucide-react";
+import { CheckCircle, Settings, ClipboardList, Users } from "lucide-react";
 
 export default function Features() {
   return (
@@ -20,19 +20,10 @@ export default function Features() {
           {/* Feature 1 */}
           <div className="bg-white dark:bg-slate-800 p-8 rounded-2xl border border-slate-200 dark:border-slate-700 shadow-sm hover:shadow-md transition-all duration-300 group">
             <div className="w-14 h-14 bg-theme-primary-20 rounded-xl flex items-center justify-center mb-6 group-hover:bg-theme-primary-50 transition-colors">
-              <svg
+              <Settings
                 className="h-7 w-7 text-theme-primary"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth={2}
-                  d="M12 6V4m0 2a2 2 0 100 4m0-4a2 2 0 110 4m-6 8a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4m6 6v10m6-2a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4"
-                />
-              </svg>
+                strokeWidth={1.5}
+              />
             </div>
             <h3 className="text-xl font-bold text-slate-900 dark:text-white mb-3">
               Advanced Trading Strategies
@@ -66,19 +57,10 @@ export default function Features() {
           {/* Feature 2 */}
           <div className="bg-white dark:bg-slate-800 p-8 rounded-2xl border border-slate-200 dark:border-slate-700 shadow-sm hover:shadow-md transition-all duration-300 group">
             <div className="w-14 h-14 bg-theme-primary-20 rounded-xl flex items-center justify-center mb-6 group-hover:bg-theme-primary-50 transition-colors">
-              <svg
+              <ClipboardList
                 className="h-7 w-7 text-theme-primary"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth={2}
-                  d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2"
-                />
-              </svg>
+                strokeWidth={1.5}
+              />
             </div>
             <h3 className="text-xl font-bold text-slate-900 dark:text-white mb-3">
               Real-Time Market Analysis
@@ -112,19 +94,7 @@ export default function Features() {
           {/* Feature 3 */}
           <div className="bg-white dark:bg-slate-800 p-8 rounded-2xl border border-slate-200 dark:border-slate-700 shadow-sm hover:shadow-md transition-all duration-300 group">
             <div className="w-14 h-14 bg-theme-primary-20 rounded-xl flex items-center justify-center mb-6 group-hover:bg-theme-primary-50 transition-colors">
-              <svg
-                className="h-7 w-7 text-theme-primary"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth={2}
-                  d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"
-                />
-              </svg>
+              <Users className="h-7 w-7 text-theme-primary" strokeWidth={1.5} />
             </div>
             <h3 className="text-xl font-bold text-slate-900 dark:text-white mb-3">
               Community Support

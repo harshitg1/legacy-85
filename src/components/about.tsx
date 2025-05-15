@@ -41,7 +41,7 @@ export default function About() {
               Who We Are and Our Mission
             </h2>
             <p className="text-slate-600 dark:text-slate-300 text-lg">
-              TradeMaster Academy was founded in 2020 by a team of professional
+            Legacy-85 Academy was founded in 2020 by a team of professional
               traders with over 30 years of combined experience in global
               financial markets.
             </p>

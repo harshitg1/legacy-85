@@ -1,4 +1,6 @@
 "use client";
+
+import { useEffect, useState } from "react";
 import Navbar from "@/components/navbar";
 import HeroSection from "@/components/heroSection";
 import About from "@/components/about";
@@ -9,11 +11,30 @@ import Testimonials from "@/components/testimonials";
 import CTA from "@/components/cta";
 import Footer from "@/components/footer";
 
-export default function Home() {
+// Simple loading component
+function LoadingState() {
   return (
-    <>
+    <div className="flex items-center justify-center min-h-screen">
+      <div className="h-16 w-16 border-t-4 border-theme-primary rounded-full animate-spin"></div>
+    </div>
+  );
+}
+
+export default function Home() {
+  const [isClient, setIsClient] = useState(false);
+
+  useEffect(() => {
+    setIsClient(true);
+  }, []);
+
+  if (!isClient) {
+    return <LoadingState />;
+  }
+
+  return (
+    <div className="">
       <Navbar />
-      <div className="min-h-screen bg-background overflow-x-hidden">
+      <div className="max-w-[1440px] mx-auto px-2 md:px-4 lg:px-12 min-h-screen bg-background overflow-x-hidden mt-[-26px]">
         <HeroSection />
         <About />
         <TrustedBy />
@@ -23,6 +44,6 @@ export default function Home() {
         <CTA />
         <Footer />
       </div>
-    </>
+    </div>
   );
 }

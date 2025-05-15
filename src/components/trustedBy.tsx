@@ -66,7 +66,7 @@ export default function TrustedBy() {
           </h2>
           <p className="text-slate-600 dark:text-slate-400 max-w-2xl mx-auto">
             Join our growing community of successful traders and investors who
-            have transformed their financial journey with TradeMaster.
+            have transformed their financial journey with Legacy-85.
           </p>
         </motion.div>
 
