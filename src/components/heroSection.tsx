@@ -6,7 +6,7 @@ import { ChevronRight, TrendingUp, BarChart3 } from "lucide-react";
 
 export default function HeroSection() {
   return (
-    <section className="relative overflow-hidden">
+    <section className="relative overflow-hidden px-4">
       {/* Background Effects */}
       <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-theme-primary-10 rounded-full blur-[120px] -z-10"></div>
       <div className="absolute bottom-0 left-0 w-[600px] h-[600px] bg-theme-primary-5 rounded-full blur-[100px] -z-10"></div>
@@ -14,11 +14,11 @@ export default function HeroSection() {
       <div className="container px-2 py-12 md:py-12 mx-auto">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           {/* Left Content */}
-          <div className="space-y-8">
-            <div className="inline-flex items-center gap-2 px-4 py-2 bg-theme-primary-10 rounded-full text-theme-primary font-medium text-sm animate-fade-in">
+          <div className="space-y-4 py-4 lg:space-y-5">
+            <div className="inline-flex items-center gap-2 px-4 py-2 bg-theme-primary-10 rounded-full text-muted-foreground font-medium text-sm animate-fade-in">
               <span className="relative flex h-2 w-2">
                 <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-theme-primary opacity-75"></span>
-                <span className="relative inline-flex rounded-full h-2 w-2 bg-theme-primary"></span>
+                <span className="relative inline-flex rounded-full h-2 w-2 bg-[#80EF80]"></span>
               </span>
               Trading Academy Now Live
             </div>
@@ -41,7 +41,7 @@ export default function HeroSection() {
               className="flex flex-col sm:flex-row gap-4 animate-fade-in-up"
               style={{ animationDelay: "0.2s" }}
             >
-              <Button className="h-10 px-4 text-xs bg-theme-primary hover:bg-theme-primary-dark text-black/60  font-medium group transition-all duration-300 transform hover:translate-y-[-2px]">
+              <Button className="h-10 px-4 text-base bg-theme-primary hover:bg-theme-primary-dark text-muted group transition-all duration-300 transform hover:translate-y-[-2px]">
                 Start Learning
                 <ChevronRight className="h-4 w-4 ml-2 transition-transform duration-300 group-hover:translate-x-1" />
               </Button>
@@ -120,7 +120,7 @@ export default function HeroSection() {
               </div>
 
               {/* Floating Card 2 */}
-              <div className="absolute -bottom-5 -right-10 p-4 bg-white dark:bg-slate-800 rounded-lg shadow-lg border border-slate-200 dark:border-slate-700 max-w-[220px] animate-float-delayed z-20">
+              <div className="absolute -bottom-5 -right-2 p-4 bg-white dark:bg-slate-800 rounded-lg shadow-lg border border-slate-200 dark:border-slate-700 max-w-[220px] animate-float-delayed z-20">
                 <div className="flex items-center mb-2">
                   <BarChart3
                     className="h-5 w-5 text-theme-primary mr-2"

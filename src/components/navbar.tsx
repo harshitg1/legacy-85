@@ -15,7 +15,7 @@ export default function Navbar() {
         {/* Logo */}
         <Link href="/" className="flex items-center space-x-2">
           <LineChart className="h-8 w-8 text-theme-primary" strokeWidth={2} />
-          <span className="text-xl font-bold text-slate-900 dark:text-white">
+          <span className="text-xl font-bold  dark:text-white">
             Legacy-85
           </span>
         </Link>
@@ -58,11 +58,11 @@ export default function Navbar() {
         <div className="hidden md:flex items-center space-x-4">
           <Button
             variant="outline"
-            className="border-slate-300 dark:border-slate-700 text-slate-900 dark:text-white hover:bg-slate-100 dark:hover:bg-slate-800"
+            className="border-slate-300 dark:border-slate-700 text-black dark:text-white hover:bg-slate-100 dark:hover:bg-slate-800"
           >
             Log In
           </Button>
-          <Button className="bg-theme-primary hover:bg-theme-primary-dark text-black">
+          <Button className="bg-theme-primary hover:bg-theme-primary-dark ">
             Sign Up
           </Button>
           <ModeToggle />

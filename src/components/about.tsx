@@ -12,9 +12,8 @@ export default function About() {
           <h2 className="text-4xl md:text-5xl font-bold text-slate-900 dark:text-white">
             About Us
           </h2>
-          <div className="mt-4 w-20 h-1 bg-theme-primary mx-auto"></div>
+          <div className="mt-3 w-20 h-1 bg-theme-primary mx-auto"></div>
         </div>
-
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           {/* Left - Image with decreased height */}
           <div className="relative">
@@ -34,9 +33,9 @@ export default function About() {
 
           {/* Right - Content */}
           <div className="space-y-6">
-            <div className="inline-flex items-center rounded-full px-3 py-1 text-sm font-medium bg-theme-primary-10 text-theme-primary">
+            {/* <div className="inline-flex items-center rounded-full px-3 py-1 text-sm font-medium bg-theme-primary-10 text-theme-primary">
               Our Story
-            </div>
+            </div> */}
             <h2 className="text-3xl md:text-4xl font-bold text-slate-900 dark:text-white">
               Who We Are and Our Mission
             </h2>
@@ -85,7 +84,7 @@ export default function About() {
                 </span>
               </div>
             </div>
-            <div className="pt-4">
+            <div className="pt-3">
               <Button className="h-12 px-8 text-base rounded-full bg-theme-primary hover:bg-theme-primary-dark text-black font-medium transition-all duration-300 transform hover:translate-y-[-2px]">
                 Learn More About Us
                 <ArrowRight className="h-4 w-4 ml-2" />
