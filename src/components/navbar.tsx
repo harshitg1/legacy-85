@@ -5,6 +5,7 @@ import { Button } from "@/components/ui/button";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import { ModeToggle } from "@/components/mode-toggle";
 import { Menu, X, LineChart } from "lucide-react";
+import Image from "next/image";
 
 export default function Navbar() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -13,11 +14,8 @@ export default function Navbar() {
     <header className="sticky top-0 z-50 bg-white/80 dark:bg-slate-900/80 backdrop-blur-lg border-b border-slate-200 dark:border-slate-800">
       <div className="container mx-auto px-4 h-16 md:h-20 flex items-center justify-between">
         {/* Logo */}
-        <Link href="/" className="flex items-center space-x-2">
-          <LineChart className="h-8 w-8 text-theme-primary" strokeWidth={2} />
-          <span className="text-xl font-bold  dark:text-white">
-            Legacy-85
-          </span>
+        <Link href="/" className="flex items-center px-8 xl:px-10">
+           <Image src="/logo.png" alt="Legacy-85 Logo" sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" width={100} height={100} />
         </Link>
 
         {/* Desktop Navigation */}
