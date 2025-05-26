@@ -6,6 +6,7 @@ import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import { ModeToggle } from "@/components/mode-toggle";
 import { Menu, X, LineChart } from "lucide-react";
 import Image from "next/image";
+import logo from "../../public/logo.png";
 
 export default function Navbar() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -15,7 +16,7 @@ export default function Navbar() {
       <div className="container mx-auto px-4 h-16 md:h-20 flex items-center justify-between">
         {/* Logo */}
         <Link href="/" className="flex items-center px-8 xl:px-10">
-           <Image src="/logo.png" alt="Legacy-85 Logo" sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" width={100} height={100} />
+           <Image src={logo} alt="Legacy-85 Logo" sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" width={100} height={50} />
         </Link>
 
         {/* Desktop Navigation */}
