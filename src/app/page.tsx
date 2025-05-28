@@ -20,16 +20,6 @@ function LoadingState() {
 }
 
 export default function Home() {
-  const [isClient, setIsClient] = useState(false);
-
-  useEffect(() => {
-    setIsClient(true);
-  }, []);
-
-  if (!isClient) {
-    return <LoadingState />;
-  }
-
   return (
     <div className="">
       <Navbar />
@@ -38,7 +28,7 @@ export default function Home() {
         <About />
         <TrustedBy />
         <Features />
-        <PopularCourses />
+        {/* <PopularCourses /> */}
         <Testimonials />
         <CTA />
         <Footer />

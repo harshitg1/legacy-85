@@ -1,161 +1,226 @@
 "use client";
-
+import React, { useState, useEffect, useMemo } from "react";
 import Image from "next/image";
-import { Button } from "@/components/ui/button";
-import { ChevronRight, TrendingUp, BarChart3 } from "lucide-react";
+import {
+  TrendingUp,
+  CheckCircle,
+  Users,
+  Award,
+  Target,
+  Star,
+  ArrowRight,
+  Zap,
+  BookOpen,
+  GraduationCap,
+} from "lucide-react";
 
-export default function HeroSection() {
+export default function AboutUs() {
+  const [currentTextIndex, setCurrentTextIndex] = useState(0);
+  const [displayText, setDisplayText] = useState("");
+  const [isTyping, setIsTyping] = useState(true);
+
+  const dynamicTexts = useMemo(
+    () => [
+      "Trading Education",
+      "Financial Freedom",
+      "Market Mastery",
+      "Investment Success",
+      "Professional Growth",
+    ],
+    []
+  );
+
+  useEffect(() => {
+    const currentText = dynamicTexts[currentTextIndex];
+    let timeoutId: ReturnType<typeof setTimeout>;
+
+    if (isTyping) {
+      if (displayText.length < currentText.length) {
+        timeoutId = setTimeout(() => {
+          setDisplayText(currentText.substring(0, displayText.length + 1));
+        }, 100); // Typing speed
+      } else {
+        timeoutId = setTimeout(() => {
+          setIsTyping(false);
+        }, 2000); // Pause before erasing
+      }
+    } else {
+      if (displayText.length > 0) {
+        timeoutId = setTimeout(() => {
+          setDisplayText(displayText.substring(0, displayText.length - 1));
+        }, 50); // Erasing speed
+      } else {
+        setCurrentTextIndex((prevIndex) =>
+          prevIndex === dynamicTexts.length - 1 ? 0 : prevIndex + 1
+        );
+        setIsTyping(true);
+      }
+    }
+
+    return () => clearTimeout(timeoutId);
+  }, [displayText, isTyping, currentTextIndex, dynamicTexts]);
+
   return (
-    <section className="relative overflow-hidden px-4">
-      {/* Background Effects */}
-      <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-theme-primary-10 rounded-full blur-[120px] -z-10"></div>
-      <div className="absolute bottom-0 left-0 w-[600px] h-[600px] bg-theme-primary-5 rounded-full blur-[100px] -z-10"></div>
+    <>
+      <section className="relative py-12 md:py-20 overflow-hidden">
+        {/* Clean, subtle background */}
+        <div className="absolute inset-0 bg-gradient-to-br from-theme-primary-5/30 via-transparent to-theme-primary-10/30"></div>
 
-      <div className="container px-2 py-12 md:py-12 mx-auto">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-          {/* Left Content */}
-          <div className="space-y-4 py-4 lg:space-y-5">
-            <div className="inline-flex items-center gap-2 px-4 py-2 bg-theme-primary-10 rounded-full text-muted-foreground font-medium text-sm animate-fade-in">
-              <span className="relative flex h-2 w-2">
-                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-theme-primary opacity-75"></span>
-                <span className="relative inline-flex rounded-full h-2 w-2 bg-[#80EF80]"></span>
-              </span>
-              Trading Academy Now Live
-            </div>
-
-            <h1 className="text-5xl  font-bold text-slate-900 dark:text-white leading-tight animate-fade-in-up">
-              Master the <span className="text-theme-primary">Markets</span>{" "}
-              with Confidence
-            </h1>
-
-            <p
-              className="text-lg text-slate-600 dark:text-slate-300 leading-relaxed max-w-xl animate-fade-in-up"
-              style={{ animationDelay: "0.1s" }}
-            >
-              Join our educational trading platform and learn from expert
-              traders. Get access to real-time market analysis, trading
-              strategies, and a supportive community.
-            </p>
-
-            <div
-              className="flex flex-col sm:flex-row gap-4 animate-fade-in-up"
-              style={{ animationDelay: "0.2s" }}
-            >
-              <Button className="h-10 px-4 text-base bg-theme-primary hover:bg-theme-primary-dark text-muted group transition-all duration-300 transform hover:translate-y-[-2px]">
-                Start Learning
-                <ChevronRight className="h-4 w-4 ml-2 transition-transform duration-300 group-hover:translate-x-1" />
-              </Button>
-              <Button
-                variant="outline"
-                className="h-10 px-4 text-xs rounded-full border-slate-300 dark:border-slate-700 text-muted-foreground dark:text-white hover:bg-slate-100 dark:hover:bg-slate-800 transition-all duration-300 transform hover:translate-y-[-2px]"
-              >
-                View Courses
-              </Button>
-            </div>
-
-            {/* Stats */}
-            <div
-              className="grid grid-cols-3 gap-6 pt-4 animate-fade-in-up"
-              style={{ animationDelay: "0.3s" }}
-            >
-              <div className="text-center p-4 rounded-xl bg-white/60 dark:bg-slate-800/60 backdrop-blur-sm border border-slate-200 dark:border-slate-700 transition-transform duration-300 hover:transform hover:scale-105">
-                <h3 className="text-3xl font-bold text-theme-primary">10K+</h3>
-                <p className="text-slate-600 dark:text-slate-400 text-sm mt-1">
-                  Active Students
-                </p>
-              </div>
-              <div className="text-center p-4 rounded-xl bg-white/60 dark:bg-slate-800/60 backdrop-blur-sm border border-slate-200 dark:border-slate-700 transition-transform duration-300 hover:transform hover:scale-105">
-                <h3 className="text-3xl font-bold text-theme-primary">92%</h3>
-                <p className="text-slate-600 dark:text-slate-400 text-sm mt-1">
-                  Success Rate
-                </p>
-              </div>
-              <div className="text-center p-4 rounded-xl bg-white/60 dark:bg-slate-800/60 backdrop-blur-sm border border-slate-200 dark:border-slate-700 transition-transform duration-300 hover:transform hover:scale-105">
-                <h3 className="text-3xl font-bold text-theme-primary">24/7</h3>
-                <p className="text-slate-600 dark:text-slate-400 text-sm mt-1">
-                  Support
-                </p>
-              </div>
-            </div>
-          </div>
-
-          {/* Right Mobile App Mockup */}
-          <div
-            className="flex justify-center lg:justify-end animate-fade-in-up"
-            style={{ animationDelay: "0.4s" }}
-          >
-            <div className="relative">
-              <div className="relative z-10 transition-transform duration-500 hover:transform hover:scale-[1.02] hover:rotate-1">
-                <Image
-                  src="/trading.png"
-                  alt="Trading App Interface"
-                  width={480} // Increased from 400
-                  height={800} // Increased from 800
-                  className="rounded-3xl border-4 border-white dark:border-slate-800 shadow-2xl"
-                  priority
-                />
+        <div className="container mx-auto px-4 relative z-10">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+            <div className="lg:col-span-5 space-y-6">
+              <div className="inline-flex items-center gap-2 px-4 py-2 bg-theme-primary-10 rounded-full text-theme-primary font-medium text-sm">
+                <span className="relative flex h-2 w-2">
+                  <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-theme-primary opacity-75"></span>
+                  <span className="relative inline-flex rounded-full h-2 w-2 bg-theme-primary"></span>
+                </span>
+                Trading Academy Now Live
               </div>
 
-              {/* Floating Card 1 */}
-              <div className="absolute top-10 -left-16 p-4 bg-white dark:bg-slate-800 rounded-lg shadow-lg border border-slate-200 dark:border-slate-700 max-w-[200px] animate-float z-20">
-                <div className="flex items-center space-x-2">
-                  <div className="p-2 rounded-full bg-theme-primary-20">
-                    <TrendingUp
-                      className="h-5 w-5 text-theme-primary"
-                      strokeWidth={2}
-                    />
+              {/* Improved heading structure */}
+              <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-slate-900 dark:text-white leading-tight">
+                <span className="block">Leading the Future of</span>
+                <span className="block mt-2 text-theme-primary-dark">
+                  {displayText} <span className="animate-pulse">|</span>
+                </span>
+                <span className="block mt-2">Since 2020</span>
+              </h1>
+
+              <p className="text-base md:text-lg text-slate-600 dark:text-slate-300 leading-relaxed max-w-xl">
+                We've been empowering traders worldwide with cutting-edge
+                education, innovative tools, and a supportive community that
+                drives real results across global markets.
+              </p>
+
+              <div className="grid grid-cols-3 gap-4 pt-4">
+                <div className="text-center p-3 bg-white/30 dark:bg-slate-800/30 rounded-lg backdrop-blur-sm hover:scale-105 transition-transform duration-300">
+                  <div className="text-xl md:text-2xl font-bold text-theme-primary mb-1">
+                    10K+
                   </div>
-                  <div>
-                    <h4 className="font-semibold text-slate-900 dark:text-white">
-                      Bitcoin
+                  <p className="text-xs md:text-sm text-slate-600 dark:text-slate-300">
+                    Active Students
+                  </p>
+                </div>
+                <div className="text-center p-3 bg-white/30 dark:bg-slate-800/30 rounded-lg backdrop-blur-sm hover:scale-105 transition-transform duration-300">
+                  <div className="text-xl md:text-2xl font-bold text-theme-primary mb-1">
+                    85%
+                  </div>
+                  <p className="text-xs md:text-sm text-slate-600 dark:text-slate-300">
+                    Success Rate
+                  </p>
+                </div>
+                <div className="text-center p-3 bg-white/30 dark:bg-slate-800/30 rounded-lg backdrop-blur-sm hover:scale-105 transition-transform duration-300">
+                  <div className="text-xl md:text-2xl font-bold text-theme-primary mb-1">
+                    40+
+                  </div>
+                  <p className="text-xs md:text-sm text-slate-600 dark:text-slate-300">
+                    Countries
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            {/* Right Image - 7 columns for more horizontal space */}
+            <div className="lg:col-span-7 relative">
+              {/* Simplified background */}
+              <div className="absolute inset-0 w-full h-full opacity-40">
+                <div className="absolute -top-12 -right-12 w-64 h-64 bg-theme-primary-20 rounded-full blur-3xl transform rotate-12"></div>
+              </div>
+
+              {/* Main Image Container - Positioned slightly right and up */}
+              <div className="relative z-10 group overflow-hidden ml-4 -mt-2">
+                {/* Outer glow effect */}
+                <div className="absolute -inset-2 bg-gradient-to-r from-theme-primary to-theme-primary-light rounded-3xl opacity-40 blur-lg group-hover:opacity-60 transition-opacity duration-500"></div>
+
+                {/* Main image with container - reduced width */}
+                <div className="relative z-10 group overflow-hidden max-w-2xl mx-auto">
+                  <div className="relative h-[350px] md:h-[400px] w-full rounded-2xl overflow-hidden shadow-2xl transform group-hover:scale-[1.02] transition-all duration-700">
+                    {/* Custom border effect */}
+                    <div className="absolute inset-0 rounded-2xl border-4 border-transparent bg-gradient-to-r from-theme-primary via-theme-primary-light to-theme-primary-dark p-[4px] z-10">
+                      <div className="h-full w-full rounded-xl"></div>
+                    </div>
+
+                    {/* Horizontal image */}
+                    <div className="absolute inset-0">
+                      <Image
+                        src="/about.jpeg"
+                        alt="Trading Expertise"
+                        fill
+                        className="object-cover object-center group-hover:scale-110 transition-transform duration-1000"
+                        priority
+                      />
+
+                      {/* Gradient overlays for depth */}
+                      <div className="absolute inset-0 bg-gradient-to-t from-slate-900/70 to-transparent opacity-80"></div>
+                      <div className="absolute inset-0 bg-gradient-to-r from-theme-primary/20 via-transparent to-theme-primary-light/20"></div>
+
+                      {/* Animated strips effect */}
+                      <div className="absolute inset-0 opacity-20">
+                        {[...Array(5)].map((_, i) => (
+                          <div
+                            key={i}
+                            className="absolute h-[2px] w-full bg-white/50 animate-pulse"
+                            style={{
+                              top: `${20 * (i + 1)}%`,
+                              animationDelay: `${i * 0.3}s`,
+                              opacity: 0.3 + i * 0.1,
+                            }}
+                          ></div>
+                        ))}
+                      </div>
+
+                      {/* Content overlay */}
+                      <div className="absolute inset-0 flex flex-col justify-end p-8">
+                        <div className="bg-black/40 backdrop-blur-sm p-6 rounded-xl transform translate-y-4 group-hover:translate-y-0 opacity-0 group-hover:opacity-100 transition-all duration-500">
+                          <h3 className="text-xl font-bold text-white mb-2">
+                            Expert Trading Education
+                          </h3>
+                          <p className="text-white/80 text-sm">
+                            Learn from professionals with real market experience
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              {/* Multiple Floating Achievement Cards */}
+              <div className="absolute -bottom-5 -left-5 bg-white dark:bg-slate-800 p-3 rounded-xl shadow-xl border border-slate-200 dark:border-slate-700 z-20 min-w-[180px] transform hover:rotate-2 transition-transform duration-300">
+                <div className="flex items-center gap-2">
+                  <div className="p-2 rounded-full bg-gradient-to-r from-theme-primary to-theme-primary-light">
+                    <TrendingUp className="h-5 w-5 text-white" />
+                  </div>
+                  <div className="flex-1">
+                    <h4 className="font-semibold text-slate-900 dark:text-white text-sm mb-0.5">
+                      Market Leader
                     </h4>
-                    <p className="text-xs text-theme-primary">+4.26%</p>
-                  </div>
-                </div>
-                <div className="mt-2 flex justify-between items-center">
-                  <span className="text-slate-900 dark:text-white font-bold">
-                    $9,290.72
-                  </span>
-                </div>
-              </div>
-
-              {/* Floating Card 2 */}
-              <div className="absolute -bottom-5 -right-2 p-4 bg-white dark:bg-slate-800 rounded-lg shadow-lg border border-slate-200 dark:border-slate-700 max-w-[220px] animate-float-delayed z-20">
-                <div className="flex items-center mb-2">
-                  <BarChart3
-                    className="h-5 w-5 text-theme-primary mr-2"
-                    strokeWidth={2}
-                  />
-                  <h4 className="font-semibold text-slate-900 dark:text-white">
-                    Trading Success
-                  </h4>
-                </div>
-                <div className="space-y-2">
-                  <div>
-                    <div className="flex justify-between text-xs mb-1">
-                      <span className="text-slate-600 dark:text-slate-400">
-                        Win Rate
+                    <div className="flex items-center gap-1">
+                      <div className="flex space-x-0.5">
+                        <Star className="h-3 w-3 fill-yellow-400 text-yellow-400" />
+                        <Star className="h-3 w-3 fill-yellow-400 text-yellow-400" />
+                        <Star className="h-3 w-3 fill-yellow-400 text-yellow-400" />
+                        <Star className="h-3 w-3 fill-yellow-400 text-yellow-400" />
+                        <Star className="h-3 w-3 fill-yellow-400 text-yellow-400" />
+                      </div>
+                      <span className="text-xs text-slate-500 dark:text-slate-400 ml-1">
+                        5.0
                       </span>
-                      <span className="text-theme-primary font-semibold">
-                        78%
-                      </span>
-                    </div>
-                    <div className="w-full bg-slate-200 dark:bg-slate-700 rounded-full h-1.5">
-                      <div
-                        className="bg-theme-primary h-1.5 rounded-full"
-                        style={{ width: "78%" }}
-                      ></div>
                     </div>
                   </div>
                 </div>
               </div>
 
-              {/* Glow Effect */}
-              <div className="absolute inset-0 bg-theme-primary-20 rounded-3xl blur-xl -z-10 transform scale-95"></div>
+              {/* Additional achievement badge */}
+              <div className="absolute -top-4 -right-4 bg-white dark:bg-slate-800 p-2 rounded-full shadow-lg border border-slate-200 dark:border-slate-700 z-20 transform hover:rotate-12 transition-transform duration-300">
+                <div className="p-1.5 rounded-full bg-gradient-to-r from-amber-400 to-amber-500">
+                  <Award className="h-5 w-5 text-white" />
+                </div>
+              </div>
             </div>
           </div>
         </div>
-      </div>
-    </section>
+      </section>
+    </>
   );
 }
