@@ -143,7 +143,7 @@ export default function AboutUs() {
                     {/* Horizontal image */}
                     <div className="absolute inset-0">
                       <Image
-                        src="/about.jpeg"
+                        src="/reception.jpeg"
                         alt="Trading Expertise"
                         fill
                         className="object-cover object-center group-hover:scale-110 transition-transform duration-1000"
@@ -151,7 +151,7 @@ export default function AboutUs() {
                       />
 
                       {/* Gradient overlays for depth */}
-                      <div className="absolute inset-0 bg-gradient-to-t from-slate-900/70 to-transparent opacity-80"></div>
+                      <div className="absolute inset-0 bg-gradient-to-t to-transparent opacity-80"></div>
                       <div className="absolute inset-0 bg-gradient-to-r from-theme-primary/20 via-transparent to-theme-primary-light/20"></div>
 
                       {/* Animated strips effect */}
@@ -159,7 +159,7 @@ export default function AboutUs() {
                         {[...Array(5)].map((_, i) => (
                           <div
                             key={i}
-                            className="absolute h-[2px] w-full bg-white/50 animate-pulse"
+                            className="absolute h-[2px] w-full animate-pulse"
                             style={{
                               top: `${20 * (i + 1)}%`,
                               animationDelay: `${i * 0.3}s`,

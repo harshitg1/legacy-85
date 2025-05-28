@@ -16,14 +16,14 @@ export default function About() {
         </div>
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           {/* Left - Image with decreased height */}
-          <div className="relative">
-            <div className="relative z-10 rounded-xl overflow-hidden shadow-xl h-[370px]">
+          <div className="relative ">
+            <div className="relative z-10 rounded-xl overflow-hidden shadow-xl h-[490px]">
               <Image
-                src="/about.jpeg"
+                src="/class.jpeg"
                 alt="Trading Expertise"
-                width={400}
+                width={500}
                 height={300}
-                className="w-full h-full object-cover"
+                className="w-full h-full object-fill"
               />
             </div>
             {/* Decorative elements */}
