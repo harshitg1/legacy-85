@@ -146,7 +146,7 @@ export default function AboutUs() {
                         src="/reception.jpeg"
                         alt="Trading Expertise"
                         fill
-                        className="object-cover object-center group-hover:scale-110 transition-transform duration-1000"
+                        className="object-cover object-center group-hover:scale-105 transition-transform duration-1000"
                         priority
                       />
 

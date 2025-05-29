@@ -11,6 +11,7 @@ const PopularCourses = lazy(() => import("@/components/popularCourses"));
 const Testimonials = lazy(() => import("@/components/testimonials"));
 const CTA = lazy(() => import("@/components/cta"));
 const Footer = lazy(() => import("@/components/footer"));
+const Grid = lazy(() => import("@/components/grid"));
 
 // Simple loading component
 function LoadingState() {
@@ -36,7 +37,8 @@ export default function Home() {
           <About />
           <TrustedBy />
           <Features />
-          <PopularCourses />
+          <Grid />
+          {/* <PopularCourses /> */}
           <Testimonials />
           <CTA />
           <Footer />
