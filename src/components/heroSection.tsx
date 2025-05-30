@@ -171,12 +171,12 @@ export default function AboutUs() {
 
                       {/* Content overlay */}
                       <div className="absolute inset-0 flex flex-col justify-end p-8">
-                        <div className="bg-black/40 backdrop-blur-sm p-6 rounded-xl transform translate-y-4 group-hover:translate-y-0 opacity-0 group-hover:opacity-100 transition-all duration-500">
+                        <div className="bg-black/30 backdrop-blur-xs p-6 rounded-xl transform translate-y-4 group-hover:translate-y-0 opacity-0 group-hover:opacity-100 transition-all duration-500">
                           <h3 className="text-xl font-bold text-white mb-2">
-                            Expert Trading Education
+                            Legacy Trading Education
                           </h3>
                           <p className="text-white/80 text-sm">
-                            Learn from professionals with real market experience
+                           An Institute committed to making a difference & enriching lives
                           </p>
                         </div>
                       </div>

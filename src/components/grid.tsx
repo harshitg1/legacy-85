@@ -54,9 +54,9 @@ export default function Grid() {
     return (
         <div className="bg-white relative">
             <div className="pt-16 pb-80 lg:pt-20 lg:pb-10">
-                <div className="flex flex-col space-y-10  mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-                    <div className="w-full justify-center text-center">
-                        <h2 className="text-sm  font-semibold">WORK WITH US</h2>
+                <div className="flex flex-col space-y-10   mx-auto max-w-7xl p-4 sm:px-6 lg:px-8">
+                    <div className="w-full justify-center  text-center">
+                        <h2 className="text-2xl text-theme-primary font-semibold">WORK WITH US</h2>
                         <h1 className="text-3xl font-bold mt-2 mb-8">Join us and make a difference</h1>
                     </div>
 

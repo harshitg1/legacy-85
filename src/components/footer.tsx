@@ -158,7 +158,7 @@ export default function Footer() {
                   strokeWidth={2}
                 />
                 <span className="text-slate-600 dark:text-slate-400">
-                  +1 (555) 123-4567
+                  +91 6393142456
                 </span>
               </li>
               <li className="flex items-start">
@@ -176,9 +176,7 @@ export default function Footer() {
                   strokeWidth={2}
                 />
                 <span className="text-slate-600 dark:text-slate-400">
-                  123 Trading Street, Financial District
-                  <br />
-                  New York, NY 10004
+                  117/H-1/365 Pandu Nagar, Kanpur <br/>Opp Bikanervala
                 </span>
               </li>
             </ul>

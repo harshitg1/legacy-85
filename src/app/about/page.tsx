@@ -13,19 +13,22 @@ import {
 } from "lucide-react";
 import Navbar from "@/components/navbar";
 import Footer from "@/components/footer";
+import Ema from "@/components/ema";
+import QuoteCard from "./components/quote";
 
 export default function About() {
   return (
-    <>
+    <div className="bg-white dark:bg-slate-900">
+    <Ema/>
+    <QuoteCard/>
       <div className="max-w-[1440px] mx-auto px-2 md:px-4 lg:px-12 min-h-screen bg-background overflow-x-hidden mt-[-26px]">
-        <section className="relative overflow-hidden px-4">
-          {/* Background Effects */}
+         {/* <section className="relative overflow-hidden px-4">
           <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-theme-primary-10 rounded-full blur-[120px] -z-10"></div>
           <div className="absolute bottom-0 left-0 w-[600px] h-[600px] bg-theme-primary-5 rounded-full blur-[100px] -z-10"></div>
 
           <div className="container px-2 py-12 md:py-12 mx-auto">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-              {/* Left Content */}
+          
               <div className="space-y-4 py-4 lg:space-y-5">
                 <div className="inline-flex items-center gap-2 px-4 py-2 bg-theme-primary-10 rounded-full text-muted-foreground font-medium text-sm animate-fade-in">
                   <span className="relative flex h-2 w-2">
@@ -65,7 +68,7 @@ export default function About() {
                   </Button>
                 </div>
 
-                {/* Stats */}
+            
                 <div
                   className="grid grid-cols-3 gap-6 pt-4 animate-fade-in-up"
                   style={{ animationDelay: "0.3s" }}
@@ -97,24 +100,26 @@ export default function About() {
                 </div>
               </div>
 
-              {/* Right Mobile App Mockup */}
+           
               <div
                 className="flex justify-center lg:justify-end animate-fade-in-up"
                 style={{ animationDelay: "0.4s" }}
               >
                 <div className="relative">
                   <div className="relative z-10 transition-transform duration-500 hover:transform hover:scale-[1.02] hover:rotate-1 mt-10">
-                    <Image
-                      src="/heroimg.png"
-                      alt="Trading App Interface"
-                      width={480} // Increased from 400
-                      height={800} // Increased from 800
-                      className="rounded-3xl border-4 border-white dark:border-slate-800 shadow-2xl"
-                      priority
-                    />
+                    <div className="w-[480px] h-[500px] relative">
+                      <Image
+                        src="/heroimg.png"
+                        alt="Trading App Interface"
+                        fill
+                        className="object-cover rounded-3xl border-4 border-white dark:border-slate-800 shadow-2xl"
+                        priority
+                      />
+                    </div>
+
                   </div>
 
-                  {/* Floating Card 1 */}
+             
                   <div className="absolute top-10 -left-16 p-4 bg-white dark:bg-slate-800 rounded-lg shadow-lg border border-slate-200 dark:border-slate-700 max-w-[200px] animate-float z-20">
                     <div className="flex items-center space-x-2">
                       <div className="p-2 rounded-full bg-theme-primary-20">
@@ -137,7 +142,7 @@ export default function About() {
                     </div>
                   </div>
 
-                  {/* Floating Card 2 */}
+            
                   <div className="absolute -bottom-5 -right-2 p-4 bg-white dark:bg-slate-800 rounded-lg shadow-lg border border-slate-200 dark:border-slate-700 max-w-[220px] animate-float-delayed z-20">
                     <div className="flex items-center mb-2">
                       <BarChart3
@@ -168,13 +173,12 @@ export default function About() {
                     </div>
                   </div>
 
-                  {/* Glow Effect */}
                   <div className="absolute inset-0 bg-theme-primary-20 rounded-3xl blur-xl -z-10 transform scale-95"></div>
                 </div>
               </div>
             </div>
           </div>
-        </section>
+        </section>  */}
 
         {/* Trading Cards Section with Theme Background */}
         <section className="relative py-16 bg-theme-primary-lighter overflow-hidden">
@@ -265,6 +269,6 @@ export default function About() {
         </section>
       </div>
       <Footer />
-    </>
+    </div>
   );
 }
