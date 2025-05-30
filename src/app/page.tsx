@@ -1,49 +1,26 @@
 "use client";
-import { useEffect, useState, Suspense, lazy } from "react";
-import Navbar from "@/components/navbar";
 
-// Lazy load components
-const HeroSection = lazy(() => import("@/components/heroSection"));
-const About = lazy(() => import("@/components/about"));
-const TrustedBy = lazy(() => import("@/components/trustedBy"));
-const Features = lazy(() => import("@/components/features"));
-const PopularCourses = lazy(() => import("@/components/popularCourses"));
-const Testimonials = lazy(() => import("@/components/testimonials"));
-const CTA = lazy(() => import("@/components/cta"));
-const Footer = lazy(() => import("@/components/footer"));
-const Grid = lazy(() => import("@/components/grid"));
+import dynamic from "next/dynamic";
 
-// Simple loading component
-function LoadingState() {
+const LandingPage = dynamic(() => import("@/components/landing"), {
+  ssr: false,
+  loading: () => <PageLoader />,
+});
+
+function PageLoader() {
   return (
-    <div className="flex items-center justify-center min-h-screen">
-   <div className=" relative flex justify-center items-center h-20">
-    <div className="rounded animate-spin ease duration-800 w-8 h-8 border-2 border-theme-primary"></div>
+  <div className="fixed inset-0 z-50 flex items-center justify-center bg-white dark:bg-slate-900">
+  <div className="w-6 h-6 border-2 border-theme-primary animate-spin" />
 </div>
 
-      {/* <div className="h-16 w-16 border-t-4 border-theme-primary rounded-full animate-spin"></div> */}
-    </div>
+
   );
 }
 
 export default function Home() {
   return (
-    <div>
-      <Suspense fallback={<LoadingState />}>
-        <Navbar />
-        <div className="max-w-[1440px] mx-auto px-2 md:px-4 lg:px-12 min-h-screen bg-background overflow-x-hidden mt-[-26px]">
-
-          <HeroSection />
-          <About />
-          <TrustedBy />
-          <Features />
-          <Grid />
-          {/* <PopularCourses /> */}
-          <Testimonials />
-          <CTA />
-          <Footer />
-        </div>
-      </Suspense>
-    </div>
+    <>
+      <LandingPage />
+    </>
   );
 }

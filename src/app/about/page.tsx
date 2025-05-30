@@ -14,10 +14,9 @@ import {
 import Navbar from "@/components/navbar";
 import Footer from "@/components/footer";
 
-export default function HeroSection() {
+export default function About() {
   return (
     <>
-      <Navbar />
       <div className="max-w-[1440px] mx-auto px-2 md:px-4 lg:px-12 min-h-screen bg-background overflow-x-hidden mt-[-26px]">
         <section className="relative overflow-hidden px-4">
           {/* Background Effects */}

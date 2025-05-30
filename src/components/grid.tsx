@@ -18,7 +18,7 @@ const IMAGES = [
     { src: '/c3.jpg', alt: 'Column 4', col: 4 },
 ]
 
-export default function HeroSection() {
+export default function Grid() {
     const cols = [1, 2, 3, 4].map((colNum) => {
         const images = IMAGES
             .filter((img) => img.col === colNum)
@@ -52,7 +52,7 @@ export default function HeroSection() {
     })
 
     return (
-        <div className="relative overflow-hidden bg-white">
+        <div className="bg-white relative">
             <div className="pt-16 pb-80 lg:pt-20 lg:pb-10">
                 <div className="flex flex-col space-y-10  mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
                     <div className="w-full justify-center text-center">
