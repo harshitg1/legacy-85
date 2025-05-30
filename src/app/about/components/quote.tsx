@@ -114,7 +114,7 @@ const QuoteCard = () => {
     <div className="max-w-7xl mx-auto px-6 py-16">
       <div className="flex flex-col lg:flex-row gap-6 lg:gap-8">
         {/* Sidebar - Table of Contents */}
-        <aside className="lg:w-1/3">
+        <aside className="hidden lg:block lg:w-1/3">
           <div className="lg:sticky lg: top-20 ">
             <div className="bg-white dark:bg-slate-900 rounded-xl p-4 ">
               <h2 className="text-2xl font-bold text-slate-900 dark:text-white mb-5 tracking-tight">

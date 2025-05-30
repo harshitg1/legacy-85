@@ -10,7 +10,7 @@ const Ema = () => {
           <span className="mr-2">Home</span> &gt; <span className="text-red-500 ml-2">About</span>
         </nav>
 
-        <h1 className="mt-6 text-5xl font-bold">
+        <h1 className="mt-6  text-3xl lg:text-5xl font-bold">
           <span className="block">2025 EMEA Digital Engagement</span>
           <span className="block italic text-orange-500 mt-2">Benchmarks Report</span>
         </h1>

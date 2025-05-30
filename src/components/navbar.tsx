@@ -29,7 +29,7 @@ export default function Navbar() {
 
         {/* Desktop Nav */}
         <nav className="hidden md:flex items-center space-x-8">
-          {["Home", "About", "Courses", "Pricing", "Testimonials", "Blog"].map((text, i) => (
+          {["Home", "About", "Courses", "Testimonials", "Blog"].map((text, i) => (
             <Link
               key={i}
               href={`/${text === "Home" ? "" : text.replace(/\s+/g, "").toLowerCase()}`}
@@ -75,17 +75,7 @@ export default function Navbar() {
                   <div className="bg-theme-primary p-1.5 rounded-md">
                     <LineChart className="h-5 w-5 text-white" strokeWidth={2} />
                   </div>
-                  <span className="text-xl font-bold text-slate-900 dark:text-white">
-                    Legacy-85
-                  </span>
                 </Link>
-                <Button
-                  variant="ghost"
-                  size="icon"
-                  onClick={() => setMobileMenuOpen(false)}
-                >
-                  <X className="h-5 w-5 text-slate-900 dark:text-white" />
-                </Button>
               </div>
 
               <div className="flex-1 overflow-auto py-4 px-6">

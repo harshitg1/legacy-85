@@ -24,19 +24,7 @@
     --input: 214.3 31.8% 91.4%;
     --ring: 142.1 76.2% 36.3%;
     --radius: 0.5rem;
-   
-    /* Purple before  Theme Colors */
-    /* --theme-primary: #83338b;
-    --theme-primary-light: #93c5fd; 
-    --theme-primary-lighter: #dbeafe;
-    --theme-primary-dark: #69247C; 
-    --theme-primary-darker: #69247C; 
-    
- 
-     --theme-primary-5: rgba(59, 130, 246, 0.05);  
-    --theme-primary-10: rgba(59, 130, 246, 0.1);  
-    --theme-primary-20: rgba(59, 130, 246, 0.2);  
-    --theme-primary-50: rgba(59, 130, 246, 0.5);   */
+  
 
     --theme-primary: #83338b;
     --theme-primary-light: #a346ae; 
