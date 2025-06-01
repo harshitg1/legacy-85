@@ -5,7 +5,7 @@ import { ArrowRight } from "lucide-react";
 
 export default function About() {
   return (
-    <section className="py-20 bg-white dark:bg-slate-900">
+    <section className=" py-16 bg-white dark:bg-slate-900">
       <div className="container mx-auto px-4">
         {/* Centered Heading */}
         <div className="text-center mb-12">

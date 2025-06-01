@@ -47,7 +47,7 @@ const Contact = () => {
   };
 
   return (
-    <section className="py-20 bg-white relative overflow-hidden">
+    <section className="py-10 bg-white relative overflow-hidden">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         {/* Header */}
         <motion.div
@@ -57,12 +57,12 @@ const Contact = () => {
           transition={{ duration: 0.6 }}
           className="text-center mb-16"
         >
-          <div className="inline-flex items-center gap-2 px-4 py-2 bg-theme-primary/5 rounded-full mb-6">
+          {/* <div className="inline-flex items-center gap-2 px-4 py-2 bg-theme-primary/5 rounded-full mb-6">
             <MessageCircle className="w-4 h-4 text-theme-primary" />
             <span className="text-sm font-semibold text-theme-primary uppercase tracking-wider">
               Get In Touch
             </span>
-          </div>
+          </div> */}
 
           <h2 className="text-4xl md:text-5xl font-bold text-slate-800 mb-6">
             Connect with <span className="text-theme-primary">our team</span>

@@ -16,11 +16,11 @@ import Events from "@/components/events";
 
 export default function LandingPage() {
   return (
-    <div className="w-full max-w-[1440px] mx-auto overflow-x-hidden bg-background relative">
+    <div className="w-full    overflow-x-hidden bg-background ">
       {/* Container with responsive padding that increases gradually with screen size */}
       <div className="px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16">
         {/* Hero section typically needs full width treatment */}
-        <div className="-mt-6 sm:-mt-8 md:-mt-10 lg:-mt-12">
+        <div className="-mt-6 sm:-mt-8 w-full md:-mt-10 lg:-mt-12">
           <HeroSection />
         </div>
 
@@ -29,15 +29,11 @@ export default function LandingPage() {
           <About />
         </div>
         <div className="mt-12 sm:mt-16 md:mt-20 lg:mt-24">
-          <Events />
+          <Mentoring />
         </div>
         <div className="mt-12 sm:mt-16 md:mt-20 lg:mt-24">
-          <TrustedBy />
+          <Events />
         </div>
-
-        {/* <div className="mt-12 sm:mt-16 md:mt-20 lg:mt-24">
-      <Features />
-    </div> */}
 
         <div className="mt-12 sm:mt-16 md:mt-20 lg:mt-24">
           <Grid />
@@ -50,9 +46,7 @@ export default function LandingPage() {
         {/* <div className="mt-12 sm:mt-16 md:mt-20 lg:mt-24">
       <CTA />
     </div> */}
-        <div className="mt-12 sm:mt-16 md:mt-20 lg:mt-24">
-          <Mentoring />
-        </div>
+
         <div className="mt-12 sm:mt-16 md:mt-20 lg:mt-24">
           <FAQs />
         </div>
