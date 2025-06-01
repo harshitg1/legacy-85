@@ -9,6 +9,8 @@ import Testimonials from "@/components/testimonials";
 import CTA from "@/components/cta";
 import Footer from "@/components/footer";
 import Contact from "@/components/contact";
+import Mentoring from "@/components/mentoring";
+import FAQs from "@/components/faqs";
 // import PopularCourses from "@/components/popularCourses"; // optional
 
 export default function LandingPage() {
@@ -45,7 +47,12 @@ export default function LandingPage() {
         {/* <div className="mt-12 sm:mt-16 md:mt-20 lg:mt-24">
       <CTA />
     </div> */}
-
+        <div className="mt-12 sm:mt-16 md:mt-20 lg:mt-24">
+          <Mentoring />
+        </div>
+        <div className="mt-12 sm:mt-16 md:mt-20 lg:mt-24">
+          <FAQs />
+        </div>
         <div className="mt-12 sm:mt-16 md:mt-20 lg:mt-24">
           <Contact />
         </div>
