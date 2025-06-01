@@ -114,10 +114,10 @@ export default function Testimonials() {
     }, 8000);
 
     return () => clearInterval(interval);
-  }, );
+  });
 
   return (
-    <section className="py-24 bg-gradient-to-b from-slate-50 to-white dark:from-slate-900 dark:to-slate-800 overflow-hidden relative">
+    <section className="py-18 bg-gradient-to-b from-slate-50 to-white dark:from-slate-900 dark:to-slate-800 overflow-hidden relative">
       {/* Background Elements */}
       <div className="absolute top-20 left-0 w-64 h-64 bg-theme-primary-20 dark:bg-theme-primary-20 rounded-full blur-3xl opacity-30 -z-10"></div>
       <div className="absolute bottom-20 right-0 w-80 h-80 bg-theme-primary-20 dark:bg-theme-primary-20 rounded-full blur-3xl opacity-30 -z-10"></div>
@@ -284,8 +284,6 @@ export default function Testimonials() {
               ))}
             </div>
           </div>
-
-       
         </div>
       </div>
     </section>

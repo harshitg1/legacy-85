@@ -13,7 +13,7 @@ export default function Navbar() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   return (
-    <header className="sticky top-0 z-50 bg-white/80 dark:bg-slate-900/80 backdrop-blur-lg border-b border-slate-200 dark:border-slate-800">
+    <header className="sticky top-0 z-50 bg-white dark:bg-slate-900/80 backdrop-blur-lg border-b border-slate-200 dark:border-slate-800">
       <div className="container mx-auto px-4 h-16 md:h-20 flex items-center justify-between">
         {/* Logo */}
         <Link href="/" className="flex items-center px-8">
@@ -29,15 +29,19 @@ export default function Navbar() {
 
         {/* Desktop Nav */}
         <nav className="hidden md:flex items-center space-x-8">
-          {["Home", "About", "Courses", "Testimonials", "Blog"].map((text, i) => (
-            <Link
-              key={i}
-              href={`/${text === "Home" ? "" : text.replace(/\s+/g, "").toLowerCase()}`}
-              className="text-slate-900 dark:text-white hover:text-theme-primary transition-colors"
-            >
-              {text}
-            </Link>
-          ))}
+          {["Home", "About", "Courses", "Testimonials", "Blog"].map(
+            (text, i) => (
+              <Link
+                key={i}
+                href={`/${
+                  text === "Home" ? "" : text.replace(/\s+/g, "").toLowerCase()
+                }`}
+                className="text-slate-900 dark:text-white hover:text-theme-primary transition-colors"
+              >
+                {text}
+              </Link>
+            )
+          )}
         </nav>
 
         {/* Desktop Buttons */}
@@ -72,18 +76,39 @@ export default function Navbar() {
             <div className="flex flex-col h-full">
               <div className="p-4 border-b border-slate-200 dark:border-slate-800 flex items-center justify-between">
                 <Link href="/" className="flex items-center space-x-2">
-                  <div className="bg-theme-primary p-1.5 rounded-md">
-                    <LineChart className="h-5 w-5 text-white" strokeWidth={2} />
+                  <div className="p-1 bg-white border border-slate-200 dark:bg-slate-800 dark:border-slate-700 rounded-md">
+                    <Image
+                      src="/LogoL1.png"
+                      alt="Legacy-85 Logo"
+                      width={30}
+                      height={30}
+                      className="object-contain"
+                      priority
+                    />
                   </div>
+                  <span className="text-lg font-bold text-slate-900 dark:text-white">
+                    Legacy-85
+                  </span>
                 </Link>
               </div>
 
               <div className="flex-1 overflow-auto py-4 px-6">
                 <nav className="flex flex-col space-y-4">
-                  {["Home", "About Us", "Courses", "Pricing", "Testimonials", "Blog"].map((text, i) => (
+                  {[
+                    "Home",
+                    "About Us",
+                    "Courses",
+                    "Pricing",
+                    "Testimonials",
+                    "Blog",
+                  ].map((text, i) => (
                     <Link
                       key={i}
-                      href={`/${text === "Home" ? "" : text.replace(/\s+/g, "").toLowerCase()}`}
+                      href={`/${
+                        text === "Home"
+                          ? ""
+                          : text.replace(/\s+/g, "").toLowerCase()
+                      }`}
                       className="text-slate-900 dark:text-white hover:text-theme-primary py-2 transition-colors text-lg"
                       onClick={() => setMobileMenuOpen(false)}
                     >

@@ -52,7 +52,7 @@ const Counter = ({ end, suffix, label, duration = 2 }: CounterProps) => {
 
 export default function TrustedBy() {
   return (
-    <section className="py-16 md:py-20 bg-slate-50 dark:bg-slate-900/50">
+    <section className="py-10 md:py-10 bg-slate-50 dark:bg-slate-900/50">
       <div className="container mx-auto px-4">
         <motion.div
           className="text-center mb-12"
@@ -77,7 +77,7 @@ export default function TrustedBy() {
           <Counter end={4} suffix="M" label="Trades Executed" duration={3} />
         </div>
 
-        <motion.div
+        {/* <motion.div
           className="mt-16 bg-white dark:bg-slate-800 rounded-2xl shadow-lg border border-slate-200 dark:border-slate-700 py-6 px-8"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -92,7 +92,7 @@ export default function TrustedBy() {
               Get Started Now
             </button>
           </div>
-        </motion.div>
+        </motion.div> */}
       </div>
     </section>
   );

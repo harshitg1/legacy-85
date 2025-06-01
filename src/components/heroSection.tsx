@@ -63,7 +63,7 @@ export default function AboutUs() {
   return (
     <>
       <section className="relative py-12 md:py-20 overflow-hidden">
-        {/* Clean, subtle background */}
+       
         <div className="absolute inset-0 bg-gradient-to-br from-theme-primary-5/30 via-transparent to-theme-primary-10/30"></div>
 
         <div className="container mx-auto px-4 relative z-10">
@@ -173,10 +173,11 @@ export default function AboutUs() {
                       <div className="absolute inset-0 flex flex-col justify-end p-8">
                         <div className="bg-black/30 backdrop-blur-xs p-6 rounded-xl transform translate-y-4 group-hover:translate-y-0 opacity-0 group-hover:opacity-100 transition-all duration-500">
                           <h3 className="text-xl font-bold text-white mb-2">
-                            Legacy Trading Education
+                            Legacy 85 Mentoring
                           </h3>
                           <p className="text-white/80 text-sm">
-                           An Institute committed to making a difference & enriching lives
+                            An Institute committed to making a difference &
+                            enriching lives
                           </p>
                         </div>
                       </div>
