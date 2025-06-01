@@ -11,6 +11,7 @@ import Footer from "@/components/footer";
 import Contact from "@/components/contact";
 import Mentoring from "@/components/mentoring";
 import FAQs from "@/components/faqs";
+import Events from "@/components/events";
 // import PopularCourses from "@/components/popularCourses"; // optional
 
 export default function LandingPage() {
@@ -27,7 +28,9 @@ export default function LandingPage() {
         <div className="mt-12 sm:mt-16 md:mt-20 lg:mt-24">
           <About />
         </div>
-
+        <div className="mt-12 sm:mt-16 md:mt-20 lg:mt-24">
+          <Events />
+        </div>
         <div className="mt-12 sm:mt-16 md:mt-20 lg:mt-24">
           <TrustedBy />
         </div>
