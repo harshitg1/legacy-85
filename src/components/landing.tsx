@@ -9,6 +9,7 @@ import Testimonials from "@/components/testimonials";
 import CTA from "@/components/cta";
 import Footer from "@/components/footer";
 import Contact from "@/components/contact";
+import Events from "@/app/blog/components/events";
 // import PopularCourses from "@/components/popularCourses"; // optional
 
 export default function LandingPage() {
@@ -25,7 +26,9 @@ export default function LandingPage() {
         <div className="mt-12 sm:mt-16 md:mt-20 lg:mt-24">
           <About />
         </div>
-
+        <div className="mt-12 sm:mt-16 md:mt-20 lg:mt-24">
+          < Events />
+        </div>
         <div className="mt-12 sm:mt-16 md:mt-20 lg:mt-24">
           <TrustedBy />
         </div>
