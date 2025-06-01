@@ -1,56 +1,55 @@
-'use client';
+"use client";
 
-import React from 'react';
-import { Calendar, ArrowRight, Play } from 'lucide-react';
-import { motion } from 'framer-motion';
+import React from "react";
+import { Calendar, ArrowRight, Play } from "lucide-react";
+import { motion } from "framer-motion";
 
 const Events = () => {
   const blogs = [
     {
       id: 1,
-      date: '09 Sep 2022',
-      title: 'Best Tally Institute Near Me',
-      image: '/blog-1.jpg'
+      date: "09 Sep 2022",
+      title: "Best Tally Institute Near Me",
+      image: "/blog-1.jpg",
     },
     {
       id: 2,
-      date: '17 May 2022',
-      title: 'Tally Class Near Me | Search & Choose Your Course Now',
-      image: '/blog-2.jpg'
-    }
+      date: "17 May 2022",
+      title: "Tally Class Near Me | Search & Choose Your Course Now",
+      image: "/blog-2.jpg",
+    },
   ];
 
   const eventLists = [
     {
       id: 1,
-      day: '02',
-      month: 'May 2025',
-      title: 'Campus Drive | ICA Dalhousie and Chowringhee',
-      location: 'Dalhousie'
+      day: "02",
+      month: "May 2025",
+      title: "Campus Drive | ICA Dalhousie and Chowringhee",
+      location: "Dalhousie",
     },
     {
       id: 2,
-      day: '23',
-      month: 'May 2025',
-      title: 'Finance Skilling Training Program | ICA Kashmir',
-      location: 'Jammu'
+      day: "23",
+      month: "May 2025",
+      title: "Finance Skilling Training Program | ICA Kashmir",
+      location: "Jammu",
     },
     {
       id: 3,
-      day: '07',
-      month: 'May 2025',
-      title: 'Mega Campus Drive 2025 | ICA Bandra',
-      location: 'Bandra'
-    }
+      day: "07",
+      month: "May 2025",
+      title: "Mega Campus Drive 2025 | ICA Bandra",
+      location: "Bandra",
+    },
   ];
 
   return (
     <div className="bg-slate-50 dark:bg-slate-900 py-16">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid lg:grid-cols-3 gap-8">
-          
           {/* Latest Blogs Section */}
-          <motion.div 
+          <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
@@ -99,7 +98,7 @@ const Events = () => {
           </motion.div>
 
           {/* Event Lists Section */}
-          <motion.div 
+          <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
@@ -153,7 +152,7 @@ const Events = () => {
           </motion.div>
 
           {/* Latest Video Section */}
-          <motion.div 
+          <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
@@ -176,18 +175,23 @@ const Events = () => {
                 </div>
                 <div className="absolute bottom-4 left-4 right-4">
                   <div className="bg-black/50 backdrop-blur-sm rounded-lg p-3">
-                    <h3 className="text-white font-semibold text-sm">BE AN ACCOUNTS MANAGER BEFORE 30!</h3>
-                    <p className="text-white/80 text-xs mt-1">Acquire the Right Skills Now!</p>
+                    <h3 className="text-white font-semibold text-sm">
+                      BE AN ACCOUNTS MANAGER BEFORE 30!
+                    </h3>
+                    <p className="text-white/80 text-xs mt-1">
+                      Acquire the Right Skills Now!
+                    </p>
                   </div>
                 </div>
               </div>
-              
+
               <div className="p-4">
                 <h3 className="font-semibold text-slate-900 dark:text-white mb-2">
                   Learning With ICA Edu Skills.
                 </h3>
                 <p className="text-sm text-slate-600 dark:text-slate-400 leading-relaxed">
-                  Certified Industrial Accountant | Accounting Training Institute | Placement Support | ICA Edu Skills.
+                  Certified Industrial Accountant | Accounting Training
+                  Institute | Placement Support | ICA Edu Skills.
                 </p>
               </div>
             </div>
@@ -197,7 +201,6 @@ const Events = () => {
               <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
             </button>
           </motion.div>
-
         </div>
       </div>
     </div>

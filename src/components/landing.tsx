@@ -12,6 +12,7 @@ import Contact from "@/components/contact";
 import Mentoring from "@/components/mentoring";
 import FAQs from "@/components/faqs";
 import Events from "@/components/events";
+import About2 from "@/components/about2";
 // import PopularCourses from "@/components/popularCourses"; // optional
 
 export default function LandingPage() {
@@ -23,7 +24,9 @@ export default function LandingPage() {
         <div className="-mt-6 sm:-mt-8 w-full md:-mt-10 lg:-mt-12">
           <HeroSection />
         </div>
-
+        <div className="-mt-6 sm:-mt-8 w-full md:-mt-10 lg:-mt-12">
+          <About2 />
+        </div>
         {/* Content sections with consistent spacing between them */}
         <div className="mt-12 sm:mt-16 md:mt-20 lg:mt-24">
           <About />

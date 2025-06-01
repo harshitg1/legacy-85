@@ -10,7 +10,7 @@ export default function About() {
         {/* Centered Heading */}
         <div className="text-center mb-12">
           <h2 className="text-4xl md:text-5xl font-bold text-slate-900 dark:text-white">
-            About Us
+            Our Mission
           </h2>
           <div className="mt-3 w-20 h-1 bg-theme-primary mx-auto"></div>
         </div>
@@ -40,7 +40,7 @@ export default function About() {
               Who We Are and Our Mission
             </h2>
             <p className="text-slate-600 dark:text-slate-300 text-lg">
-            Legacy-85 Academy was founded in 2020 by a team of professional
+              Legacy-85 Academy was founded in 2020 by a team of professional
               traders with over 30 years of combined experience in global
               financial markets.
             </p>
