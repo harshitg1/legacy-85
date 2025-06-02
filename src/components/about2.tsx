@@ -10,37 +10,37 @@ export default function AboutSection() {
       <div className="max-w-7xl mx-auto">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           {/* Left side - Images */}
-          <div className="relative">
-            {/* Main large image - Increased height */}
+          <div className="relative mt-14">
+            {/* Main large image - Reduced height */}
             <div className="relative">
-              <div className="relative w-full h-[550px] overflow-hidden rounded-2xl shadow-lg">
+              <div className="relative w-full h-[400px] overflow-hidden rounded-xl shadow-md">
                 <Image
                   src="/reception.jpeg"
                   alt="Professional man in suit"
-                  width={660}
-                  height={550}
+                  width={500}
+                  height={400}
                   className="object-cover w-full h-full"
                   priority
                 />
               </div>
 
-              {/* Overlapping smaller image - Increased height */}
-              <div className="absolute bottom-12 -left-12 w-64 h-64">
-                <div className="relative w-full h-full overflow-hidden rounded-2xl shadow-lg border-4 border-white">
+              {/* Overlapping smaller image - Reduced height */}
+              <div className="absolute bottom-8 -left-8 w-48 h-48">
+                <div className="relative w-full h-full overflow-hidden rounded-xl shadow-md border-4 border-white">
                   <Image
                     src="/a1.jpeg"
                     alt="Woman working on laptop"
-                    width={256}
-                    height={256}
+                    width={192}
+                    height={192}
                     className="object-cover w-full h-full"
                   />
                 </div>
               </div>
 
-              {/* Purple circle with stats - Using theme color */}
-              <div className="absolute -bottom-8 -right-8 w-44 h-44 bg-[#8b5091] rounded-full flex flex-col items-center justify-center text-white shadow-lg">
-                <div className="text-3xl font-bold">1,485+</div>
-                <div className="text-sm text-center leading-tight">
+              {/* Purple circle with stats - Reduced size */}
+              <div className="absolute -bottom-6 -right-6 w-36 h-36 bg-[#8b5091] rounded-full flex flex-col items-center justify-center text-white shadow-md">
+                <div className="text-2xl font-bold">1,485+</div>
+                <div className="text-xs text-center leading-tight">
                   Trusted Clients
                 </div>
               </div>
@@ -64,12 +64,10 @@ export default function AboutSection() {
               </h2>
 
               <p className="text-gray-600 leading-relaxed">
-                At Legacy85, we are dedicated to providing exceptional trading
-                education and mentorship to traders of all experience levels.
-                Our team of expert traders combines decades of market experience
-                to deliver comprehensive training programs that equip our
-                students with the skills needed to navigate today's complex
-                financial markets.
+                At Legacy85, we provide top-tier trading education and
+                mentorship for traders at all levels. Our expert team brings
+                decades of experience to deliver practical training that helps
+                students navigate today’s financial markets.
               </p>
             </div>
 
@@ -85,9 +83,8 @@ export default function AboutSection() {
                     Trusted Partner
                   </h3>
                   <p className="text-gray-600">
-                    With over 1,400 successful students, we've established
-                    ourselves as a trusted partner in the trading education
-                    industry, maintaining a satisfaction rate of over 96%.
+                    With 1,400+ successful students and a satisfaction rate
+                    above 96%, we’re a trusted partner in trading education.
                   </p>
                 </div>
               </div>
@@ -102,9 +99,9 @@ export default function AboutSection() {
                     Advanced Platform
                   </h3>
                   <p className="text-gray-600">
-                    Our custom-built learning platform combines theoretical
-                    knowledge with practical application, allowing students to
-                    track their progress and receive personalized feedback.
+                    Our platform combines theory and practice to help students
+                    track their progress, master skills, and receive personal
+                    feedback for growth.
                   </p>
                 </div>
               </div>
@@ -119,9 +116,9 @@ export default function AboutSection() {
                     Tested Reliability
                   </h3>
                   <p className="text-gray-600">
-                    Our trading strategies have been rigorously tested across
-                    various market conditions, ensuring students learn methods
-                    that stand the test of time and market volatility.
+                    Our trading strategies are rigorously tested in various
+                    market conditions, ensuring students learn methods that work
+                    over time.
                   </p>
                 </div>
               </div>
