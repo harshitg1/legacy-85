@@ -17,12 +17,13 @@ import About2 from "@/components/about2";
 
 export default function LandingPage() {
   return (
-    <div className="w-full    overflow-x-hidden bg-background ">
-      {/* Container with responsive padding that increases gradually with screen size */}
+    <div className="w-full  overflow-x-hidden bg-background ">
+      <div className=" w-full px-10 py-6 ">
+        <HeroSection />
+      </div>
       <div className="px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16">
-        {/* Hero section typically needs full width treatment */}
-          <HeroSection />
-            <div className="mt-12 sm:mt-16 md:mt-20 lg:mt-24">
+
+        <div className="mt-12 sm:mt-16 md:mt-20 lg:mt-24">
           <Contact />
         </div>
         <div >
@@ -50,7 +51,7 @@ export default function LandingPage() {
         <div className="mt-12 sm:mt-16 md:mt-20 lg:mt-24">
           <FAQs />
         </div>
-      
+
       </div>
     </div>
   );

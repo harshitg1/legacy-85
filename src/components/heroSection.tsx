@@ -289,11 +289,10 @@ export default function AboutUs() {
   }, [displayText, isTyping, currentTextIndex, dynamicTexts]);
 
   return (
-    <section className="relative mt-14 min-h-[70vh] w-full overflow-hidden rounded-2xl border border-slate-200/20 shadow-2xl  my-6 bg-slate-950/20 backdrop-blur-sm">
-      {/* Full Background Image with Diagonal Cut - REDUCED HEIGHT */}
-      <div className="absolute inset-0 z-0">
+   <section className="relative h-[500px] sm:h-[550px] md:h-[600px] lg:h-[450px] xl:h-[520px] max-w-[1400px] mx-auto overflow-hidden rounded-2xl border border-slate-200/20 shadow-2xl xl:my-6 bg-slate-950/20 backdrop-blur-sm">
+      <div className="absolute inset-0 z-0 ">
         <div
-          className="absolute inset-0 rounded-2xl overflow-hidden"
+          className="absolute inset-0  rounded-2xl overflow-hidden"
           style={{
             clipPath: 'polygon(40% 0%, 100% 0%, 100% 100%, 0% 100%)'
           }}
@@ -368,7 +367,7 @@ export default function AboutUs() {
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
 
             {/* Left Content - positioned in the cut area */}
-            <div className="lg:col-span-5 space-y-5 relative z-20">
+            <div className="lg:col-span-5 space-y-7 relative z-20">
               {/* Live Badge */}
               <div className="inline-flex items-center gap-2 px-4 py-2 bg-white/10 backdrop-blur-md rounded-full border border-white/20 text-white font-medium text-sm">
                 <span className="relative flex h-2 w-2">
