@@ -6,12 +6,14 @@ import { Users, Monitor, TrendingUp } from "lucide-react";
 
 export default function AboutSection() {
   return (
-    <div className="bg-gray-50 pt-24 pb-14 px-4 sm:px-6 lg:px-8">
+    <div className="bg-gray-50 pt-20 px-4 sm:px-6 lg:px-8">
+      <h2 className=" flex  justify-center items-center text-4xl font-bold text-gray-900 mb-6">
+        We Are The Best Trading {"  "}
+        <span className="text-[#83338b]"> Mentoring Agency</span>
+      </h2>
       <div className="max-w-7xl mx-auto">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-          {/* Left side - Images */}
           <div className="relative mt-14">
-            {/* Main large image - Reduced height */}
             <div className="relative">
               <div className="relative w-full h-[400px] overflow-hidden rounded-xl shadow-md">
                 <Image
@@ -24,7 +26,6 @@ export default function AboutSection() {
                 />
               </div>
 
-              {/* Overlapping smaller image - Reduced height */}
               <div className="absolute bottom-8 -left-8 w-48 h-48">
                 <div className="relative w-full h-full overflow-hidden rounded-xl shadow-md border-4 border-white">
                   <Image
@@ -37,7 +38,6 @@ export default function AboutSection() {
                 </div>
               </div>
 
-              {/* Purple circle with stats - Reduced size */}
               <div className="absolute -bottom-6 -right-6 w-36 h-36 bg-[#8b5091] rounded-full flex flex-col items-center justify-center text-white shadow-md">
                 <div className="text-2xl font-bold">1,485+</div>
                 <div className="text-xs text-center leading-tight">
@@ -50,18 +50,11 @@ export default function AboutSection() {
           {/* Right side - Content */}
           <div className="space-y-8">
             {/* Header */}
-            <div>
-              <div className="flex items-center space-x-2 mb-4">
-                <div className="w-2 h-2 bg-[#83338b] rounded-full"></div>
-                <span className="text-[#83338b] font-medium">
-                  About Company
-                </span>
-              </div>
 
-              <h2 className="text-4xl font-bold text-gray-900 mb-6">
-                We Are The Best Trading{" "}
-                <span className="text-[#83338b]">Mentoring Agency</span>
-              </h2>
+            <div>
+
+
+
 
               <p className="text-gray-600 leading-relaxed">
                 At Legacy85, we provide top-tier trading education and
@@ -106,7 +99,6 @@ export default function AboutSection() {
                 </div>
               </div>
 
-              {/* Tested Reliability */}
               <div className="flex items-start space-x-4">
                 <div className="w-12 h-12 bg-[#c682cf]/20 rounded-full flex items-center justify-center flex-shrink-0">
                   <TrendingUp className="w-6 h-6 text-[#83338b]" />

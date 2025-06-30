@@ -21,10 +21,8 @@ export default function LandingPage() {
       {/* Container with responsive padding that increases gradually with screen size */}
       <div className="px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16">
         {/* Hero section typically needs full width treatment */}
-        <div className="-mt-6 sm:-mt-8 w-full md:-mt-10 lg:-mt-12">
           <HeroSection />
-        </div>
-        <div className="-mt-6 sm:-mt-8 w-full md:-mt-10 lg:-mt-12">
+        <div >
           <About2 />
         </div>
         {/* Content sections with consistent spacing between them */}
