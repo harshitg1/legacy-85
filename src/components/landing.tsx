@@ -22,6 +22,9 @@ export default function LandingPage() {
       <div className="px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16">
         {/* Hero section typically needs full width treatment */}
           <HeroSection />
+            <div className="mt-12 sm:mt-16 md:mt-20 lg:mt-24">
+          <Contact />
+        </div>
         <div >
           <About2 />
         </div>
@@ -44,16 +47,10 @@ export default function LandingPage() {
           <Testimonials />
         </div>
 
-        {/* <div className="mt-12 sm:mt-16 md:mt-20 lg:mt-24">
-      <CTA />
-    </div> */}
-
         <div className="mt-12 sm:mt-16 md:mt-20 lg:mt-24">
           <FAQs />
         </div>
-        <div className="mt-12 sm:mt-16 md:mt-20 lg:mt-24">
-          <Contact />
-        </div>
+      
       </div>
     </div>
   );
